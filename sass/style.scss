@@ -6,7 +6,10 @@
 
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/_menu";
 
 @import "./components/discover";
 @import "./components/fonctionnement";
-@import "./components/restaurants-cards"
+@import "./components/restaurants-cards";
+@import "./components/_heart-button";
+@import "./components/choice";

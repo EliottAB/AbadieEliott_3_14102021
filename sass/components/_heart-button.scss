@@ -1,0 +1,32 @@
+.restaurants div, .mainmenu{
+    >i{
+        position: absolute;
+        font-size: 1.6em;
+        cursor: pointer;
+        height: 1.2em;
+    }
+    .fas{
+        pointer-events: none;
+        color: white;
+        background: linear-gradient($color-secondary, $color-primary);
+        background-clip: text;
+        transform: scale(1%);
+        transition: scale .2s, color .3s;
+        transition-timing-function: ease-in;
+        transition-delay: .1s;
+    }
+    .far{
+        transition: opacity .2s;
+        transition-delay: .4s;
+    }
+    .far:active + .fas, .far:hover + .fas{
+        scale: 11000%;
+        color: transparent;
+        background-clip: text;
+        transition-delay: .2s;
+    }
+    .far:active, .far:hover{
+        opacity: 0;
+        transition-delay: 0s;
+    }
+}

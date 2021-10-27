@@ -53,7 +53,6 @@ table {
 }
 
 header {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,14 +62,33 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 5em;
+  height: 3.5em;
   -webkit-box-shadow: .05em .05em .8em grey;
           box-shadow: .05em .05em .8em grey;
   z-index: 0;
 }
 
 header #logo {
-  height: 2.1em;
+  height: 1.6em;
+}
+
+header a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header #row {
+  position: absolute;
+  left: 1em;
+  font-size: 1.3em;
+  color: #323232;
 }
 
 footer {
@@ -108,6 +126,36 @@ footer a, footer div {
   margin-bottom: .7em;
   color: white;
   text-decoration: none;
+}
+
+.firstview {
+  width: 100%;
+  top: 3.5em;
+  z-index: -1;
+}
+
+.mainmenu {
+  position: relative;
+  top: -3.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2.4em 1.5em;
+  border-radius: 2.7em 2.7em 0 0;
+  background-color: #f0f0f0;
+}
+
+.mainmenu h1 {
+  font-family: "Shrikhand";
+  font-size: 1.7em;
+}
+
+.mainmenu > i {
+  right: 1.4em;
 }
 
 .discover {
@@ -227,6 +275,8 @@ footer a, footer div {
   background-color: #f8f8f8;
   -webkit-box-shadow: 0.2em 0.4em 0.4em #e6e6e6;
           box-shadow: 0.2em 0.4em 0.4em #e6e6e6;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
 }
 
 .fonctionnement div i:first-child {
@@ -253,10 +303,20 @@ footer a, footer div {
   margin-left: 1.8em;
   font-size: 1.4em;
   color: grey;
+  -webkit-transition: color .2s;
+  transition: color .2s;
 }
 
 .fonctionnement div p {
   margin-left: 1.5em;
+}
+
+.fonctionnement div:hover {
+  background-color: #f0e8fa;
+}
+
+.fonctionnement div:hover > i:not(:first-child) {
+  color: #9356DC;
 }
 
 .restaurants {
@@ -283,33 +343,8 @@ footer a, footer div {
 }
 
 .restaurants div i {
-  position: absolute;
   bottom: 1.26em;
   right: 1.22em;
-  font-size: 1.6em;
-  cursor: pointer;
-  height: 1.2em;
-}
-
-.restaurants div .fas {
-  bottom: 31.5em;
-  right: 26.68em;
-  pointer-events: none;
-  font-size: .1em;
-  color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  -webkit-transform: scale(20%);
-          transform: scale(20%);
-  -webkit-transition: scale .2s, color .2s;
-  transition: scale .2s, color .2s;
-}
-
-.restaurants div .far:active + .fas, .restaurants div .far:hover + .fas {
-  scale: 8500%;
-  color: transparent;
-  background-clip: text;
 }
 
 .restaurants a {
@@ -359,5 +394,49 @@ footer a, footer div {
 .restaurants a:nth-child(3) img {
   -o-object-position: center -10.2em;
      object-position: center -10.2em;
+}
+
+.restaurants div > i, .mainmenu > i {
+  position: absolute;
+  font-size: 1.6em;
+  cursor: pointer;
+  height: 1.2em;
+}
+
+.restaurants div .fas, .mainmenu .fas {
+  pointer-events: none;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-transform: scale(1%);
+          transform: scale(1%);
+  -webkit-transition: scale .2s, color .3s;
+  transition: scale .2s, color .3s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+.restaurants div .far, .mainmenu .far {
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+.restaurants div .far:active + .fas, .restaurants div .far:hover + .fas, .mainmenu .far:active + .fas, .mainmenu .far:hover + .fas {
+  scale: 11000%;
+  color: transparent;
+  background-clip: text;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+.restaurants div .far:active, .restaurants div .far:hover, .mainmenu .far:active, .mainmenu .far:hover {
+  opacity: 0;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 /*# sourceMappingURL=style.css.map */

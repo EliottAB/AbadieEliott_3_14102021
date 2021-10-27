@@ -12,30 +12,8 @@
         height: 16.8em;
         margin-bottom: 1.5em;
         i{
-            position: absolute;
             bottom: 1.26em;
             right: 1.22em;
-            font-size: 1.6em;
-            cursor: pointer;
-            height: 1.2em;
-        }
-        .fas{
-            bottom: 31.5em;
-            right: 26.68em;
-            pointer-events: none;
-            font-size: .1em;
-            color: white;
-            background: linear-gradient($color-secondary, $color-primary);
-            background-clip: text;
-            transform: scale(20%);
-            transition: scale .2s, color .2s;
-        }
-        .far:active + .fas, .far:hover + .fas{
-            scale: 8500%;
-            color: transparent;
-            background-clip: text;
-        }
-        .far{
         }
     }
     a{
