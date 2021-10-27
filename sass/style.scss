@@ -1,5 +1,12 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
 @import "./base/reset";
 @import "./base/typography";
+
 @import "./layout/header";
-@import "./layout/main";
 @import "./layout/footer";
+
+@import "./components/discover";
+@import "./components/fonctionnement";
+@import "./components/restaurants-cards"

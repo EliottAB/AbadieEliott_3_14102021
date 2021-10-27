@@ -15,7 +15,7 @@ time, mark, audio, video, main {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 1em !important;
+  font-size: 1em;
   font: inherit;
   vertical-align: baseline;
 }
@@ -30,6 +30,7 @@ body {
   font-size: 4vw;
   font-family: "Roboto", sans-serif;
   line-height: 1;
+  margin: 0;
 }
 
 ol, ul {
@@ -49,5 +50,314 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5em;
+  -webkit-box-shadow: .05em .05em .8em grey;
+          box-shadow: .05em .05em .8em grey;
+  z-index: 0;
+}
+
+header #logo {
+  height: 2.1em;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.7em 0 0 1.6em;
+  background-color: #323232;
+}
+
+footer img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  width: 6em;
+  margin-bottom: 1.6em;
+}
+
+footer div a {
+  margin-left: .5em;
+}
+
+footer i {
+  color: white;
+}
+
+footer div:nth-child(3) i {
+  font-size: .7em;
+}
+
+footer a, footer div {
+  margin-bottom: .7em;
+  color: white;
+  text-decoration: none;
+}
+
+.discover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: whitesmoke;
+  height: 21em;
+}
+
+.discover .--localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 3em;
+  font-size: 1.15em;
+  background-color: #ebebeb;
+}
+
+.discover .--localisation p {
+  margin: 0 1.2em;
+}
+
+.discover h3 {
+  width: 70%;
+  margin-top: 1.8em;
+  font-size: 1.5em;
+}
+
+.discover p {
+  margin-top: 1.1em;
+  font-size: 1.2em;
+  color: #646464;
+}
+
+.discover a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 0;
+  width: 15em;
+  height: 3em;
+  margin-top: 2.2em;
+  border-radius: 100em;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  text-decoration: none;
+  -webkit-box-shadow: .2em .3em .5em grey;
+          box-shadow: .2em .3em .5em grey;
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  -webkit-transition: top .2s, -webkit-filter .4s, -webkit-box-shadow .4s;
+  transition: top .2s, -webkit-filter .4s, -webkit-box-shadow .4s;
+  transition: filter .4s, box-shadow .4s, top .2s;
+  transition: filter .4s, box-shadow .4s, top .2s, -webkit-filter .4s, -webkit-box-shadow .4s;
+}
+
+.discover a:hover {
+  top: .3em;
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
+  -webkit-box-shadow: 0.2em 0.3em 0.5em #323232;
+          box-shadow: 0.2em 0.3em 0.5em #323232;
+}
+
+.fonctionnement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 27em;
+  padding: 3.5em 1.3em 0 1.3em;
+}
+
+.fonctionnement h3 {
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.fonctionnement div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 5em;
+  margin: 0 0 1.3em 1em;
+  border-radius: 1.3em;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: 0.2em 0.4em 0.4em #e6e6e6;
+          box-shadow: 0.2em 0.4em 0.4em #e6e6e6;
+}
+
+.fonctionnement div i:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: -.9em;
+  height: 1em;
+  width: 1em;
+  padding: .5em;
+  border-radius: 100em;
+  color: white;
+  background-color: #9356DC;
+}
+
+.fonctionnement div i:not(:first-child) {
+  margin-left: 1.8em;
+  font-size: 1.4em;
+  color: grey;
+}
+
+.fonctionnement div p {
+  margin-left: 1.5em;
+}
+
+.restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: whitesmoke;
+  padding: 3em 1.3em 2.5em 1.3em;
+}
+
+.restaurants > h3 {
+  font-size: 1.5em;
+  margin-bottom: 1.2em;
+}
+
+.restaurants div {
+  position: relative;
+  height: 16.8em;
+  margin-bottom: 1.5em;
+}
+
+.restaurants div i {
+  position: absolute;
+  bottom: 1.26em;
+  right: 1.22em;
+  font-size: 1.6em;
+  cursor: pointer;
+  height: 1.2em;
+}
+
+.restaurants div .fas {
+  bottom: 31.5em;
+  right: 26.68em;
+  pointer-events: none;
+  font-size: .1em;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-transform: scale(20%);
+          transform: scale(20%);
+  -webkit-transition: scale .2s, color .2s;
+  transition: scale .2s, color .2s;
+}
+
+.restaurants div .far:active + .fas, .restaurants div .far:hover + .fas {
+  scale: 8500%;
+  color: transparent;
+  background-clip: text;
+}
+
+.restaurants a {
+  position: absolute;
+  width: 100%;
+  border-radius: 1.2em;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  -webkit-box-shadow: 0.2em 0.2em 0.5em #c8c8c8;
+          box-shadow: 0.2em 0.2em 0.5em #c8c8c8;
+}
+
+.restaurants a img {
+  width: 100%;
+  height: 11.5em;
+  border-radius: 1.2em 1.2em 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.restaurants a i {
+  position: absolute;
+  right: .7em;
+  top: .8em;
+  height: 1em;
+  padding: .5em .8em;
+  border-radius: .3em;
+  font-size: 1em;
+  color: #006432;
+  background-color: #99E2D0;
+}
+
+.restaurants a .--nom {
+  margin: .7em 0 0 .6em;
+  font-size: 1.4em;
+}
+
+.restaurants a .--lieu {
+  margin: .3em 0 1em .7em;
+  font-size: 1.15em;
+  color: #464646;
+}
+
+.restaurants a:nth-child(3) img {
+  -o-object-position: center -10.2em;
+     object-position: center -10.2em;
 }
 /*# sourceMappingURL=style.css.map */

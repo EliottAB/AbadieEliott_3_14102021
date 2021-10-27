@@ -1,0 +1,80 @@
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(245, 245, 245);
+    padding: 3em 1.3em 2.5em 1.3em;
+    >h3{
+        font-size: 1.5em;
+        margin-bottom: 1.2em;
+    }
+    div{
+        position: relative;
+        height: 16.8em;
+        margin-bottom: 1.5em;
+        i{
+            position: absolute;
+            bottom: 1.26em;
+            right: 1.22em;
+            font-size: 1.6em;
+            cursor: pointer;
+            height: 1.2em;
+        }
+        .fas{
+            bottom: 31.5em;
+            right: 26.68em;
+            pointer-events: none;
+            font-size: .1em;
+            color: white;
+            background: linear-gradient($color-secondary, $color-primary);
+            background-clip: text;
+            transform: scale(20%);
+            transition: scale .2s, color .2s;
+        }
+        .far:active + .fas, .far:hover + .fas{
+            scale: 8500%;
+            color: transparent;
+            background-clip: text;
+        }
+        .far{
+        }
+    }
+    a{
+        position: absolute;
+        width: 100%;
+        border-radius: 1.2em;
+        text-decoration: none;
+        color: black;
+        background-color: white;
+        box-shadow: .2em .2em .5em rgb(200, 200, 200);
+        img{
+            width: 100%;
+            height: 11.5em;
+            border-radius: 1.2em 1.2em 0 0;
+            object-fit: cover;
+            object-position: bottom;
+        }
+        i{
+            position: absolute;
+            right: .7em;
+            top: .8em;
+            height: 1em;
+            padding: .5em .8em;
+            border-radius: .3em;
+            font-size: 1em;
+            color: rgb(0, 100, 50);
+            background-color: $color-tertiary;
+        }
+        .--nom{
+            margin: .7em 0 0 .6em;
+            font-size: 1.4em;
+        }
+        .--lieu{
+            margin: .3em 0 1em .7em;
+            font-size: 1.15em;
+            color: rgb(70, 70, 70);
+        }
+    }
+    a:nth-child(3) img{
+        object-position: center -10.2em;
+    }
+}

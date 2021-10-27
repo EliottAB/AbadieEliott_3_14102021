@@ -1,0 +1,13 @@
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+    box-shadow: .05em .05em .8em grey;
+    z-index: 0;
+
+    #logo{
+        height: 2.1em;
+    }
+}

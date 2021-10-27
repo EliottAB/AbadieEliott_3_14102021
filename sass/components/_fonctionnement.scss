@@ -1,0 +1,39 @@
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    height: 27em;
+    padding: 3.5em 1.3em 0 1.3em;
+    h3{
+        font-size: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 5em;
+        margin: 0 0 1.3em 1em;
+        border-radius: 1.3em;
+        background-color: rgb(248, 248, 248);
+        box-shadow: .2em .4em .4em rgb(230, 230, 230);
+        i:first-child{
+            @include flex-center;
+            position: absolute;
+            left: -.9em;
+            height: 1em;
+            width: 1em;
+            padding: .5em;
+            border-radius: 100em;
+            color: white;
+            background-color: $color-primary;
+        }
+        i:not(:first-child){
+            margin-left: 1.8em;
+            font-size: 1.4em;
+            color: grey;
+        }
+        p{
+            margin-left: 1.5em;
+        }
+    }
+}

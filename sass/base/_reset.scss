@@ -13,7 +13,7 @@ time, mark, audio, video, main{
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 1em !important;
+	font-size: 1em;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -22,10 +22,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
+body{
 	font-size: 4vw;
 	font-family: "Roboto", sans-serif;
 	line-height: 1;
+	margin: 0;
 }
 ol, ul {
 	list-style: none;
