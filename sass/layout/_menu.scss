@@ -1,14 +1,14 @@
 .firstview{
+    position: absolute;
     width: 100%;
-    top: 3.5em;
     z-index: -1;
 }
 .mainmenu{
     position: relative;
-    top: -3.5em;
+    top: 13em;
     display: flex;
     flex-direction: column;
-    padding: 2.4em 1.5em;
+    padding: 2.4em 1.5em 5em;
     border-radius: 2.7em 2.7em 0 0;
     background-color: rgb(240, 240, 240);
     h1{
