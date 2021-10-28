@@ -26,24 +26,4 @@
         font-size: 1.2em;
         color: rgb(100, 100, 100);
     }
-    a{
-        @include flex-center;
-        position: relative;
-        top: 0;
-        width: 15em;
-        height: 3em;
-        margin-top: 2.2em;
-        border-radius: 100em;
-        color: white;
-        background: linear-gradient($color-secondary, $color-primary);
-        text-decoration: none;
-        box-shadow: .2em .3em .5em grey;
-        filter: brightness(100%);
-        transition: filter .4s, box-shadow .4s, top .2s;
-        &:hover{
-            top: .3em;
-            filter: brightness(130%);
-            box-shadow: .2em .3em .5em rgb(50, 50, 50);
-        }
-    }
 }

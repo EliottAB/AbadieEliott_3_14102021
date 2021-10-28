@@ -1,0 +1,40 @@
+.mainmenu section{
+    .ordre{
+        position: relative;
+        margin-bottom: 1.5em;
+        &:before{
+            content: "";
+            position: absolute;
+            top: 1.4em;
+            width: 2.5em;
+            height: .2em;
+            background-color: $color-tertiary;
+        }
+    }
+    .plat{
+        display: flex;
+        flex-direction: column;
+        height: 2.8em;
+        padding: .8em .7em;
+        margin-bottom: 1em;
+        border-radius: .8em;
+        box-shadow: .1em .2em .3em rgb(200, 200, 200);
+        background-color: white;
+        &--nom{
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        div{
+            display: flex;
+            justify-content: space-between;
+            margin-top: .6em;
+        }
+        &--description{
+            font-size: .8em;
+            color: rgb(60, 60, 60);
+        }
+        &--prix{
+            margin-right: 1em;
+        }
+    }
+}
