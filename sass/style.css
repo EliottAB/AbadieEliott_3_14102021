@@ -65,6 +65,7 @@ header {
   height: 3.5em;
   -webkit-box-shadow: .05em .05em .8em grey;
           box-shadow: .05em .05em .8em grey;
+  background-color: white;
   z-index: 0;
 }
 
@@ -93,7 +94,6 @@ header #row {
 
 footer {
   position: relative;
-  top: 12em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,7 +101,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 1.7em 0 0 1.6em;
+  padding: 1.7em 0 2em 1.6em;
   background-color: #323232;
 }
 
@@ -136,9 +136,11 @@ footer a, footer div {
   z-index: -1;
 }
 
+.firstview.toohigh {
+  top: -4em;
+}
+
 .mainmenu {
-  position: relative;
-  top: 13em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,6 +148,7 @@ footer a, footer div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 13em;
   padding: 2.4em 1.5em 5em;
   border-radius: 2.7em 2.7em 0 0;
   background-color: #f0f0f0;
@@ -336,6 +339,11 @@ footer a, footer div {
      object-position: bottom;
 }
 
+.restaurants a .toohigh {
+  -o-object-position: center -10em;
+     object-position: center -10em;
+}
+
 .restaurants a i {
   position: absolute;
   right: .7em;
@@ -423,6 +431,7 @@ footer a, footer div {
 }
 
 .mainmenu section .plat {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,7 +439,6 @@ footer a, footer div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 2.8em;
   padding: .8em .7em;
   margin-bottom: 1em;
   border-radius: .8em;
@@ -440,18 +448,18 @@ footer a, footer div {
 }
 
 .mainmenu section .plat--nom {
-  font-size: 1.1em;
+  line-height: 1.2em;
   font-weight: bold;
 }
 
-.mainmenu section .plat div {
+.mainmenu section .plat div:not(.plat--coche) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: .6em;
+  margin-top: .4em;
 }
 
 .mainmenu section .plat--description {
@@ -461,6 +469,25 @@ footer a, footer div {
 
 .mainmenu section .plat--prix {
   margin-right: 1em;
+}
+
+.mainmenu section .plat--coche {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 0 .7em .7em 0;
+  background-color: #99E2D0;
 }
 
 .button {

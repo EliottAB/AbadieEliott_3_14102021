@@ -31,6 +31,9 @@
             object-fit: cover;
             object-position: bottom;
         }
+        .toohigh{
+            object-position: center -10em;
+        }
         i{
             position: absolute;
             right: .7em;

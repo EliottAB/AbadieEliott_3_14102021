@@ -12,22 +12,22 @@
         }
     }
     .plat{
+        position: relative;
         display: flex;
         flex-direction: column;
-        height: 2.8em;
         padding: .8em .7em;
         margin-bottom: 1em;
         border-radius: .8em;
         box-shadow: .1em .2em .3em rgb(200, 200, 200);
         background-color: white;
         &--nom{
-            font-size: 1.1em;
+            line-height: 1.2em;
             font-weight: bold;
         }
-        div{
+        div:not(.plat--coche){
             display: flex;
             justify-content: space-between;
-            margin-top: .6em;
+            margin-top: .4em;
         }
         &--description{
             font-size: .8em;
@@ -35,6 +35,16 @@
         }
         &--prix{
             margin-right: 1em;
+        }
+        &--coche{
+            @include flex-center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            border-radius: 0 .7em .7em 0;
+            background-color: $color-tertiary;
         }
     }
 }
