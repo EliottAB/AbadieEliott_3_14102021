@@ -15,11 +15,15 @@
         position: relative;
         display: flex;
         flex-direction: column;
+        height: auto;
         padding: .8em .7em;
         margin-bottom: 1em;
         border-radius: .8em;
         box-shadow: .1em .2em .3em rgb(200, 200, 200);
         background-color: white;
+        cursor: pointer;
+        transition: padding-right .4s;
+        overflow: hidden;
         &--nom{
             line-height: 1.2em;
             font-weight: bold;
@@ -31,10 +35,13 @@
         }
         &--description{
             font-size: .8em;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
             color: rgb(60, 60, 60);
         }
         &--prix{
-            margin-right: 1em;
+            margin: -0.1em 1em 0 .5em;
         }
         &--coche{
             @include flex-center;
@@ -43,8 +50,28 @@
             right: 0;
             width: 0;
             height: 100%;
-            border-radius: 0 .7em .7em 0;
             background-color: $color-tertiary;
+            overflow: hidden;
+            transition: width .4s;
+            i{
+                @include flex-center;
+                font-size: .8em;
+                width: 1.7em;
+                height: 1.7em;
+                border-radius: 10em;
+                color: $color-tertiary;
+                background-color: white;
+            }
+        }
+        &:hover{
+            padding-right: 18%;
+        }
+        &:hover .plat--coche{
+            width: 18%;
+            i{
+                transform: rotate(360deg);
+                transition: transform .5s;
+            }
         }
     }
 }

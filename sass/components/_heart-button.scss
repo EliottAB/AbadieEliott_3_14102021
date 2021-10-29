@@ -5,28 +5,25 @@
         cursor: pointer;
         height: 1.2em;
     }
-    .fas{
+    .fas.fa-heart{
         pointer-events: none;
-        color: white;
         background: linear-gradient($color-secondary, $color-primary);
         background-clip: text;
-        transform: scale(1%);
-        transition: scale .2s, color .3s;
-        transition-timing-function: ease-in;
+        color: transparent;
+        scale: 0;
+        transition: scale .2s;
         transition-delay: .1s;
     }
-    .far{
-        transition: opacity .2s;
-        transition-delay: .4s;
+    .far.fa-heart{
+        transition: opacity .3s;
     }
-    .far:active + .fas, .far:hover + .fas{
-        scale: 11000%;
-        color: transparent;
-        background-clip: text;
+    .far.fa-heart:active + .fas.fa-heart, .far.fa-heart:hover + .fas.fa-heart{
+        scale: 1;
         transition-delay: .2s;
+        transition-timing-function: cubic-bezier(.53,.59,.61,.28);
     }
-    .far:active, .far:hover{
+    .far.fa-heart:active, .far.fa-heart:hover{
         opacity: 0;
-        transition-delay: 0s;
+        transition-delay: .35s;
     }
 }

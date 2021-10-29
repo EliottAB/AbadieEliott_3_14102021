@@ -1,11 +1,12 @@
 header{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 3.5em;
     box-shadow: .05em .05em .8em grey;
     background-color: white;
-    z-index: 0;
+    z-index: 1;
     #logo{
         height: 1.6em;
     }

@@ -33,6 +33,14 @@ body {
   margin: 0;
 }
 
+@media screen and (min-width: 992px) {
+  body {
+    width: 25em;
+    margin: auto;
+    font-size: 16px;
+  }
+}
+
 ol, ul {
   list-style: none;
 }
@@ -53,6 +61,7 @@ table {
 }
 
 header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,7 +75,7 @@ header {
   -webkit-box-shadow: .05em .05em .8em grey;
           box-shadow: .05em .05em .8em grey;
   background-color: white;
-  z-index: 0;
+  z-index: 1;
 }
 
 header #logo {
@@ -379,41 +388,36 @@ footer a, footer div {
   height: 1.2em;
 }
 
-.restaurants div .fas, .mainmenu .fas {
+.restaurants div .fas.fa-heart, .mainmenu .fas.fa-heart {
   pointer-events: none;
-  color: white;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   background-clip: text;
-  -webkit-transform: scale(1%);
-          transform: scale(1%);
-  -webkit-transition: scale .2s, color .3s;
-  transition: scale .2s, color .3s;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
+  color: transparent;
+  scale: 0;
+  -webkit-transition: scale .2s;
+  transition: scale .2s;
   -webkit-transition-delay: .1s;
           transition-delay: .1s;
 }
 
-.restaurants div .far, .mainmenu .far {
-  -webkit-transition: opacity .2s;
-  transition: opacity .2s;
-  -webkit-transition-delay: .4s;
-          transition-delay: .4s;
+.restaurants div .far.fa-heart, .mainmenu .far.fa-heart {
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
 }
 
-.restaurants div .far:active + .fas, .restaurants div .far:hover + .fas, .mainmenu .far:active + .fas, .mainmenu .far:hover + .fas {
-  scale: 11000%;
-  color: transparent;
-  background-clip: text;
+.restaurants div .far.fa-heart:active + .fas.fa-heart, .restaurants div .far.fa-heart:hover + .fas.fa-heart, .mainmenu .far.fa-heart:active + .fas.fa-heart, .mainmenu .far.fa-heart:hover + .fas.fa-heart {
+  scale: 1;
   -webkit-transition-delay: .2s;
           transition-delay: .2s;
+  -webkit-transition-timing-function: cubic-bezier(0.53, 0.59, 0.61, 0.28);
+          transition-timing-function: cubic-bezier(0.53, 0.59, 0.61, 0.28);
 }
 
-.restaurants div .far:active, .restaurants div .far:hover, .mainmenu .far:active, .mainmenu .far:hover {
+.restaurants div .far.fa-heart:active, .restaurants div .far.fa-heart:hover, .mainmenu .far.fa-heart:active, .mainmenu .far.fa-heart:hover {
   opacity: 0;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
+  -webkit-transition-delay: .35s;
+          transition-delay: .35s;
 }
 
 .mainmenu section .ordre {
@@ -439,12 +443,17 @@ footer a, footer div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: auto;
   padding: .8em .7em;
   margin-bottom: 1em;
   border-radius: .8em;
   -webkit-box-shadow: 0.1em 0.2em 0.3em #c8c8c8;
           box-shadow: 0.1em 0.2em 0.3em #c8c8c8;
   background-color: white;
+  cursor: pointer;
+  -webkit-transition: padding-right .4s;
+  transition: padding-right .4s;
+  overflow: hidden;
 }
 
 .mainmenu section .plat--nom {
@@ -464,11 +473,14 @@ footer a, footer div {
 
 .mainmenu section .plat--description {
   font-size: .8em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   color: #3c3c3c;
 }
 
 .mainmenu section .plat--prix {
-  margin-right: 1em;
+  margin: -0.1em 1em 0 .5em;
 }
 
 .mainmenu section .plat--coche {
@@ -486,8 +498,45 @@ footer a, footer div {
   right: 0;
   width: 0;
   height: 100%;
-  border-radius: 0 .7em .7em 0;
   background-color: #99E2D0;
+  overflow: hidden;
+  -webkit-transition: width .4s;
+  transition: width .4s;
+}
+
+.mainmenu section .plat--coche i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .8em;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 10em;
+  color: #99E2D0;
+  background-color: white;
+}
+
+.mainmenu section .plat:hover {
+  padding-right: 18%;
+}
+
+.mainmenu section .plat:hover .plat--coche {
+  width: 18%;
+}
+
+.mainmenu section .plat:hover .plat--coche i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 
 .button {
@@ -512,18 +561,16 @@ footer a, footer div {
   text-decoration: none;
   -webkit-box-shadow: 0.3em 0.4em 0.5em #969696;
           box-shadow: 0.3em 0.4em 0.5em #969696;
-  -webkit-filter: brightness(100%);
-          filter: brightness(100%);
-  -webkit-transition: top .2s, -webkit-filter .4s, -webkit-box-shadow .2s;
-  transition: top .2s, -webkit-filter .4s, -webkit-box-shadow .2s;
-  transition: filter .4s, box-shadow .2s, top .2s;
-  transition: filter .4s, box-shadow .2s, top .2s, -webkit-filter .4s, -webkit-box-shadow .2s;
+  opacity: 100%;
+  -webkit-transition: opacity .4s, top .2s, -webkit-box-shadow .2s;
+  transition: opacity .4s, top .2s, -webkit-box-shadow .2s;
+  transition: opacity .4s, box-shadow .2s, top .2s;
+  transition: opacity .4s, box-shadow .2s, top .2s, -webkit-box-shadow .2s;
 }
 
 .button:hover {
   top: .3em;
-  -webkit-filter: brightness(115%);
-          filter: brightness(115%);
+  opacity: 75%;
   -webkit-box-shadow: 0.1em 0.2em 0.4em #646464;
           box-shadow: 0.1em 0.2em 0.4em #646464;
 }

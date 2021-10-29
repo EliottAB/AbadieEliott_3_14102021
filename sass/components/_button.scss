@@ -10,11 +10,11 @@
     background: linear-gradient($color-secondary, $color-primary);
     text-decoration: none;
     box-shadow: .3em .4em .5em rgb(150, 150, 150);
-    filter: brightness(100%);
-    transition: filter .4s, box-shadow .2s, top .2s;
+    opacity: 100%;
+    transition: opacity .4s, box-shadow .2s, top .2s;
     &:hover{
         top: .3em;
-        filter: brightness(115%);
+        opacity: 75%;
         box-shadow: .1em .2em .4em rgb(100, 100, 100);
     }
 }
