@@ -41,7 +41,10 @@
             color: rgb(60, 60, 60);
         }
         &--prix{
+            position: relative;
+            right: 0;
             margin: -0.1em 1em 0 .5em;
+            transition: right .4s;
         }
         &--coche{
             @include flex-center;
@@ -64,8 +67,11 @@
             }
         }
         &:hover{
-            padding-right: 18%;
+            .plat--prix{
+                right: 18%;
+            }
         }
+        /*le bloc de code ci-dessous permet la transition de la coche*/
         &:hover .plat--coche{
             width: 18%;
             i{
@@ -73,5 +79,14 @@
                 transition: transform .5s;
             }
         }
+        @media screen and (min-width: 720px){
+            width: 30em;
+        }
+    }
+    @media screen and (min-width: 720px){
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
     }
 }

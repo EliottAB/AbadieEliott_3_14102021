@@ -22,15 +22,16 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html{
+	scroll-behavior: smooth;
+}
 body{
 	font-size: 4vw;
 	font-family: "Roboto", sans-serif;
 	line-height: 1;
 	margin: 0;
-	@media screen and (min-width: 992px){
-		width: 25em;
-		margin: auto;
-		font-size: 16px;
+	@media screen and (min-width: 720px){
+		font-size: 20px;
 	}
 }
 ol, ul {

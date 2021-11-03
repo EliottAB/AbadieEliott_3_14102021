@@ -4,9 +4,18 @@
     z-index: -1;
     &.toohigh{
         top: -4em;
+        @media screen and (min-width: 720px){
+
+        }
+    }
+    @media screen and (min-width: 720px){
+        height: 40em;
+        top: -7em;
+        object-fit: cover;
     }
 }
 .mainmenu{
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 13em;
@@ -16,11 +25,21 @@
     h1{
         font-family: "Shrikhand";
         font-size: 1.7em;
+        @media screen and (min-width: 720px){
+            margin: auto;
+        }
     }
     >i{
         right: 1.4em;
+        @media screen and (min-width: 720px){
+            top: 1.5em;
+            right: 1.5em !important;
+        }
     }
     section{
         margin-top: 2em;
+    }
+    @media screen and (min-width: 720px){
+        margin-top: 20em;
     }
 }
