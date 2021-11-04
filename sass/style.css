@@ -851,15 +851,6 @@ footer a, footer div {
 
 .loader {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
   height: 100%;
   background-color: rgba(100, 100, 100, 0.8);
@@ -868,9 +859,13 @@ footer a, footer div {
   z-index: 3;
 }
 
+.loader div {
+  margin-left: 50%;
+  margin-top: 40vh;
+}
+
 .loader i {
   position: absolute;
-  margin: -1em 0 0 1em;
   font-size: 5em;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;

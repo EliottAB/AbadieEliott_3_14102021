@@ -1,16 +1,16 @@
 .loader{
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
     background-color: rgba(100, 100, 100, 0.8);
     animation: "loader" .4s 3s forwards;
     z-index: 3;
+    div{
+        margin-left: 50%;
+        margin-top: 40vh;
+    }
     i{
         position: absolute;
-        margin: -1em 0 0 1em;
         font-size: 5em;
         transform-origin: bottom left;
         animation: 2s "loading" linear;
