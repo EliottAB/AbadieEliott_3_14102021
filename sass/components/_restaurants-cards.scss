@@ -73,7 +73,7 @@
             color: rgb(0, 100, 50);
             background-color: $color-tertiary;
         }
-        .--nom{
+        .nom{
             margin: .7em 0 0 .6em;
             font-size: 1.4em;
             @media screen and (min-width: 720px){
@@ -81,7 +81,7 @@
                 font-size: 1.3em;
             }
         }
-        .--lieu{
+        .lieu{
             margin: .3em 0 1em .7em;
             font-size: 1.15em;
             color: rgb(70, 70, 70);

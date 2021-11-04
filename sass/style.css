@@ -263,7 +263,7 @@ footer a, footer div {
   background-color: whitesmoke;
 }
 
-.discover .--localisation {
+.discover .localisation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -279,7 +279,7 @@ footer a, footer div {
   background-color: #ebebeb;
 }
 
-.discover .--localisation p {
+.discover .localisation p {
   margin: 0 1.2em;
 }
 
@@ -506,26 +506,26 @@ footer a, footer div {
   background-color: #99E2D0;
 }
 
-.restaurants a .--nom {
+.restaurants a .nom {
   margin: .7em 0 0 .6em;
   font-size: 1.4em;
 }
 
 @media screen and (min-width: 720px) {
-  .restaurants a .--nom {
+  .restaurants a .nom {
     margin-top: .2em;
     font-size: 1.3em;
   }
 }
 
-.restaurants a .--lieu {
+.restaurants a .lieu {
   margin: .3em 0 1em .7em;
   font-size: 1.15em;
   color: #464646;
 }
 
 @media screen and (min-width: 720px) {
-  .restaurants a .--lieu {
+  .restaurants a .lieu {
     font-size: 1em;
   }
 }
@@ -680,12 +680,12 @@ footer a, footer div {
           animation-delay: 3.6s;
 }
 
-.mainmenu section .plat--nom {
+.mainmenu section .platnom {
   line-height: 1.2em;
   font-weight: bold;
 }
 
-.mainmenu section .plat div:not(.plat--coche) {
+.mainmenu section .plat div:not(.platcoche) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -695,7 +695,7 @@ footer a, footer div {
   margin-top: .4em;
 }
 
-.mainmenu section .plat--description {
+.mainmenu section .platdescription {
   font-size: .8em;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -703,7 +703,7 @@ footer a, footer div {
   color: #3c3c3c;
 }
 
-.mainmenu section .plat--prix {
+.mainmenu section .platprix {
   position: relative;
   right: 0;
   margin: -0.1em 1em 0 .5em;
@@ -711,7 +711,7 @@ footer a, footer div {
   transition: right .4s, margin-left .4s;
 }
 
-.mainmenu section .plat--coche {
+.mainmenu section .platcoche {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -732,7 +732,7 @@ footer a, footer div {
   transition: width .4s;
 }
 
-.mainmenu section .plat--coche i {
+.mainmenu section .platcoche i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -750,16 +750,16 @@ footer a, footer div {
   background-color: white;
 }
 
-.mainmenu section .plat:hover .plat--prix {
+.mainmenu section .plat:hover .platprix {
   right: 18%;
   margin-left: 4em;
 }
 
-.mainmenu section .plat:hover .plat--coche {
+.mainmenu section .plat:hover .platcoche {
   width: 18%;
 }
 
-.mainmenu section .plat:hover .plat--coche i {
+.mainmenu section .plat:hover .platcoche i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-transition: -webkit-transform .5s;
@@ -854,8 +854,8 @@ footer a, footer div {
   width: 100%;
   height: 100%;
   background-color: rgba(100, 100, 100, 0.8);
-  -webkit-animation: "loader" .4s 3s forwards;
-          animation: "loader" .4s 3s forwards;
+  -webkit-animation: loader .4s 3s forwards;
+          animation: loader .4s 3s forwards;
   z-index: 3;
 }
 
@@ -872,56 +872,54 @@ footer a, footer div {
   font-size: 5em;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-animation: 2s "loading" linear;
-          animation: 2s "loading" linear;
 }
 
 .loader i:nth-child(1) {
   -webkit-transform: rotate(0deg) translate(0.6em);
           transform: rotate(0deg) translate(0.6em);
   color: #e68c5a;
-  -webkit-animation: "pizza1" 1.5s ease-in-out 2 alternate;
-          animation: "pizza1" 1.5s ease-in-out 2 alternate;
+  -webkit-animation: pizza1 1.5s ease-in-out 2 alternate;
+          animation: pizza1 1.5s ease-in-out 2 alternate;
 }
 
 .loader i:nth-child(2) {
   -webkit-transform: rotate(60deg) translate(0.6em);
           transform: rotate(60deg) translate(0.6em);
   color: #aaaa32;
-  -webkit-animation: "pizza2" 1.5s ease-in-out 2 alternate;
-          animation: "pizza2" 1.5s ease-in-out 2 alternate;
+  -webkit-animation: pizza2 1.5s ease-in-out 2 alternate;
+          animation: pizza2 1.5s ease-in-out 2 alternate;
 }
 
 .loader i:nth-child(3) {
   -webkit-transform: rotate(120deg) translate(0.6em);
           transform: rotate(120deg) translate(0.6em);
   color: #649678;
-  -webkit-animation: "pizza3" 1.5s ease-in-out 2 alternate;
-          animation: "pizza3" 1.5s ease-in-out 2 alternate;
+  -webkit-animation: pizza3 1.5s ease-in-out 2 alternate;
+          animation: pizza3 1.5s ease-in-out 2 alternate;
 }
 
 .loader i:nth-child(4) {
   -webkit-transform: rotate(180deg) translate(0.6em);
           transform: rotate(180deg) translate(0.6em);
   color: #50b45a;
-  -webkit-animation: "pizza4" 1.5s ease-in-out 2 alternate;
-          animation: "pizza4" 1.5s ease-in-out 2 alternate;
+  -webkit-animation: pizza4 1.5s ease-in-out 2 alternate;
+          animation: pizza4 1.5s ease-in-out 2 alternate;
 }
 
 .loader i:nth-child(5) {
   -webkit-transform: rotate(240deg) translate(0.6em);
           transform: rotate(240deg) translate(0.6em);
   color: #784664;
-  -webkit-animation: "pizza5" 1.5s ease-in-out 2 alternate;
-          animation: "pizza5" 1.5s ease-in-out 2 alternate;
+  -webkit-animation: pizza5 1.5s ease-in-out 2 alternate;
+          animation: pizza5 1.5s ease-in-out 2 alternate;
 }
 
 .loader i:nth-child(6) {
   -webkit-transform: rotate(300deg) translate(0.6em);
           transform: rotate(300deg) translate(0.6em);
   color: #b43c50;
-  -webkit-animation: "pizza6" 1.5s ease-in-out 2 alternate;
-          animation: "pizza6" 1.5s ease-in-out 2 alternate;
+  -webkit-animation: pizza6 1.5s ease-in-out 2 alternate;
+          animation: pizza6 1.5s ease-in-out 2 alternate;
 }
 
 @-webkit-keyframes pizza1 {

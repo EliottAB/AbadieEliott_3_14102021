@@ -3,7 +3,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(100, 100, 100, 0.8);
-    animation: "loader" .4s 3s forwards;
+    animation: loader .4s 3s forwards;
     z-index: 3;
     div{
         position: absolute;
@@ -15,36 +15,35 @@
         position: absolute;
         font-size: 5em;
         transform-origin: bottom left;
-        animation: 2s "loading" linear;
         &:nth-child(1){
             transform: rotate(0deg) translate(.6em);
             color: rgb(230, 140, 90);
-            animation: "pizza1" 1.5s ease-in-out 2 alternate;
+            animation: pizza1 1.5s ease-in-out 2 alternate;
         }
         &:nth-child(2){
             transform: rotate(60deg) translate(.6em);
             color: rgb(170, 170, 50);
-            animation: "pizza2" 1.5s ease-in-out 2 alternate;
+            animation: pizza2 1.5s ease-in-out 2 alternate;
         }
         &:nth-child(3){
             transform: rotate(120deg) translate(.6em);
             color: rgb(100, 150, 120);
-            animation: "pizza3" 1.5s ease-in-out 2 alternate;
+            animation: pizza3 1.5s ease-in-out 2 alternate;
         }
         &:nth-child(4){
             transform: rotate(180deg) translate(.6em);
             color: rgb(80, 180, 90);
-            animation: "pizza4" 1.5s ease-in-out 2 alternate;
+            animation: pizza4 1.5s ease-in-out 2 alternate;
         }
         &:nth-child(5){
             transform: rotate(240deg) translate(.6em);
             color: rgb(120, 70, 100);
-            animation: "pizza5" 1.5s ease-in-out 2 alternate;
+            animation: pizza5 1.5s ease-in-out 2 alternate;
         }
         &:nth-child(6){
             transform: rotate(300deg) translate(.6em);
             color: rgb(180, 60, 80);
-            animation: "pizza6" 1.5s ease-in-out 2 alternate;
+            animation: pizza6 1.5s ease-in-out 2 alternate;
         }
     }
 }
