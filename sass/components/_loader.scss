@@ -6,7 +6,9 @@
     animation: "loader" .4s 3s forwards;
     z-index: 3;
     div{
+        position: absolute;
         margin-left: 50%;
+        transform: translate(-50%);
         margin-top: 40vh;
     }
     i{
