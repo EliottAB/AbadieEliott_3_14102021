@@ -628,7 +628,56 @@ footer a, footer div {
   -webkit-transition: padding-right .4s;
   transition: padding-right .4s;
   overflow: hidden;
+  opacity: 0;
+  -webkit-animation: show 1s ease-out forwards;
+          animation: show 1s ease-out forwards;
+  /*ci dessous le bloc de code permettant un delay d'arrivage pour chaque plat*/
   /*le bloc de code ci-dessous permet la transition de la coche*/
+}
+
+.mainmenu section .plat:nth-child(1n) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.mainmenu section .plat:nth-child(2n) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.mainmenu section .plat:nth-child(3n) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.mainmenu section .plat:nth-child(4n) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+.mainmenu section .plat:nth-child(5n) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.mainmenu section .plat:nth-child(6n) {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+
+.mainmenu section .plat:nth-child(7n) {
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+}
+
+.mainmenu section .plat:nth-child(8n) {
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+
+.mainmenu section .plat:nth-child(9n) {
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
 }
 
 .mainmenu section .plat--nom {
@@ -739,6 +788,28 @@ footer a, footer div {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+    top: 2em;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    top: 2em;
+  }
+  to {
+    opacity: 1;
+    top: 0;
   }
 }
 

@@ -24,6 +24,14 @@
         cursor: pointer;
         transition: padding-right .4s;
         overflow: hidden;
+        opacity: 0;
+        animation: show 1s ease-out forwards;
+        /*ci dessous le bloc de code permettant un delay d'arrivage pour chaque plat*/
+        @for $i from 1 to 10{
+            &:nth-child(#{$i}n){
+                animation-delay: #{$i * 0.4}s;
+            }
+        }
         &--nom{
             line-height: 1.2em;
             font-weight: bold;
@@ -90,4 +98,9 @@
         flex-direction: column;
         align-items: center;
     }
+}
+
+@keyframes show{
+    from{opacity: 0; top: 2em;}
+    to{opacity: 1; top: 0;}
 }
