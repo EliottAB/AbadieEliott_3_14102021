@@ -26,6 +26,14 @@
             bottom: 1.26em;
             right: 1.22em;
         }
+        >img{
+            right: 1.75em;
+            bottom: 2.3em;
+            @media screen and (min-width: 720px){
+                right: 1.1em;
+                bottom: 1.9em;
+            }
+        }
         @media screen and (min-width: 720px){
             width: 30%;
             min-width: 11.7em;

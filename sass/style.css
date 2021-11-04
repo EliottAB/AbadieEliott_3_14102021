@@ -225,6 +225,18 @@ footer a, footer div {
   }
 }
 
+.mainmenu > img {
+  right: 2.05em;
+  top: 2.2em;
+}
+
+@media screen and (min-width: 720px) {
+  .mainmenu > img {
+    right: 2.2em;
+    top: 2.25em;
+  }
+}
+
 .mainmenu section {
   margin-top: 2em;
 }
@@ -428,6 +440,18 @@ footer a, footer div {
   right: 1.22em;
 }
 
+.restaurants div > img {
+  right: 1.75em;
+  bottom: 2.3em;
+}
+
+@media screen and (min-width: 720px) {
+  .restaurants div > img {
+    right: 1.1em;
+    bottom: 1.9em;
+  }
+}
+
 @media screen and (min-width: 720px) {
   .restaurants div {
     width: 30%;
@@ -537,14 +561,15 @@ footer a, footer div {
 }
 
 .restaurants div .fas.fa-heart, .mainmenu .fas.fa-heart {
-  pointer-events: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
-  color: transparent;
-  scale: 0;
-  -webkit-transition: scale .2s;
-  transition: scale .2s;
+  position: absolute;
+  width: 2em;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
   -webkit-transition-delay: .1s;
           transition-delay: .1s;
 }
@@ -554,8 +579,9 @@ footer a, footer div {
   transition: opacity .3s;
 }
 
-.restaurants div .far.fa-heart:active + .fas.fa-heart, .restaurants div .far.fa-heart:hover + .fas.fa-heart, .mainmenu .far.fa-heart:active + .fas.fa-heart, .mainmenu .far.fa-heart:hover + .fas.fa-heart {
-  scale: 1;
+.restaurants div .far.fa-heart:hover + .fas.fa-heart, .restaurants div .fas.fa-heart:hover, .mainmenu .far.fa-heart:hover + .fas.fa-heart, .mainmenu .fas.fa-heart:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition-delay: .2s;
           transition-delay: .2s;
   -webkit-transition-timing-function: cubic-bezier(0.53, 0.59, 0.61, 0.28);
@@ -632,8 +658,8 @@ footer a, footer div {
   position: relative;
   right: 0;
   margin: -0.1em 1em 0 .5em;
-  -webkit-transition: right .4s;
-  transition: right .4s;
+  -webkit-transition: right .4s, margin-left .4s;
+  transition: right .4s, margin-left .4s;
 }
 
 .mainmenu section .plat--coche {
@@ -677,6 +703,7 @@ footer a, footer div {
 
 .mainmenu section .plat:hover .plat--prix {
   right: 18%;
+  margin-left: 4em;
 }
 
 .mainmenu section .plat:hover .plat--coche {
@@ -749,5 +776,222 @@ footer a, footer div {
   opacity: 75%;
   -webkit-box-shadow: 0.1em 0.2em 0.4em #646464;
           box-shadow: 0.1em 0.2em 0.4em #646464;
+}
+
+.loader {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 100, 100, 0.8);
+  -webkit-animation: "loader" .4s 3s forwards;
+          animation: "loader" .4s 3s forwards;
+  z-index: 3;
+}
+
+.loader i {
+  position: absolute;
+  margin: -1em 0 0 1em;
+  font-size: 5em;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-animation: 2s "loading" linear;
+          animation: 2s "loading" linear;
+}
+
+.loader i:nth-child(1) {
+  -webkit-animation: "pizza1" 1.5s ease-in-out 2 alternate;
+          animation: "pizza1" 1.5s ease-in-out 2 alternate;
+  color: #e68c5a;
+}
+
+.loader i:nth-child(2) {
+  -webkit-animation: "pizza2" 1.5s ease-in-out 2 alternate;
+          animation: "pizza2" 1.5s ease-in-out 2 alternate;
+  color: #aaaa32;
+}
+
+.loader i:nth-child(3) {
+  -webkit-animation: "pizza3" 1.5s ease-in-out 2 alternate;
+          animation: "pizza3" 1.5s ease-in-out 2 alternate;
+  color: #649678;
+}
+
+.loader i:nth-child(4) {
+  -webkit-animation: "pizza4" 1.5s ease-in-out 2 alternate;
+          animation: "pizza4" 1.5s ease-in-out 2 alternate;
+  color: #50b45a;
+}
+
+.loader i:nth-child(5) {
+  -webkit-animation: "pizza5" 1.5s ease-in-out 2 alternate;
+          animation: "pizza5" 1.5s ease-in-out 2 alternate;
+  color: #784664;
+}
+
+.loader i:nth-child(6) {
+  -webkit-animation: "pizza6" 1.5s ease-in-out 2 alternate;
+          animation: "pizza6" 1.5s ease-in-out 2 alternate;
+  color: #b43c50;
+}
+
+@-webkit-keyframes pizza1 {
+  from {
+    -webkit-transform: rotate(0deg) translate(0.6em);
+            transform: rotate(0deg) translate(0.6em);
+  }
+  to {
+    -webkit-transform: rotate(420deg) translate(0);
+            transform: rotate(420deg) translate(0);
+  }
+}
+
+@keyframes pizza1 {
+  from {
+    -webkit-transform: rotate(0deg) translate(0.6em);
+            transform: rotate(0deg) translate(0.6em);
+  }
+  to {
+    -webkit-transform: rotate(420deg) translate(0);
+            transform: rotate(420deg) translate(0);
+  }
+}
+
+@-webkit-keyframes pizza2 {
+  from {
+    -webkit-transform: rotate(60deg) translate(0.6em);
+            transform: rotate(60deg) translate(0.6em);
+  }
+  to {
+    -webkit-transform: rotate(480deg) translate(0);
+            transform: rotate(480deg) translate(0);
+  }
+}
+
+@keyframes pizza2 {
+  from {
+    -webkit-transform: rotate(60deg) translate(0.6em);
+            transform: rotate(60deg) translate(0.6em);
+  }
+  to {
+    -webkit-transform: rotate(480deg) translate(0);
+            transform: rotate(480deg) translate(0);
+  }
+}
+
+@-webkit-keyframes pizza3 {
+  from {
+    -webkit-transform: rotate(120deg) translate(0.6em);
+            transform: rotate(120deg) translate(0.6em);
+  }
+  to {
+    -webkit-transform: rotate(540deg) translate(0);
+            transform: rotate(540deg) translate(0);
+  }
+}
+
+@keyframes pizza3 {
+  from {
+    -webkit-transform: rotate(120deg) translate(0.6em);
+            transform: rotate(120deg) translate(0.6em);
+  }
+  to {
+    -webkit-transform: rotate(540deg) translate(0);
+            transform: rotate(540deg) translate(0);
+  }
+}
+
+@-webkit-keyframes pizza4 {
+  from {
+    -webkit-transform: rotate(180deg) translate(0.6em);
+            transform: rotate(180deg) translate(0.6em);
+  }
+  to {
+    -webkit-transform: rotate(600deg) translate(0);
+            transform: rotate(600deg) translate(0);
+  }
+}
+
+@keyframes pizza4 {
+  from {
+    -webkit-transform: rotate(180deg) translate(0.6em);
+            transform: rotate(180deg) translate(0.6em);
+  }
+  to {
+    -webkit-transform: rotate(600deg) translate(0);
+            transform: rotate(600deg) translate(0);
+  }
+}
+
+@-webkit-keyframes pizza5 {
+  from {
+    -webkit-transform: rotate(240deg) translate(0.6em);
+            transform: rotate(240deg) translate(0.6em);
+  }
+  to {
+    -webkit-transform: rotate(660deg) translate(0);
+            transform: rotate(660deg) translate(0);
+  }
+}
+
+@keyframes pizza5 {
+  from {
+    -webkit-transform: rotate(240deg) translate(0.6em);
+            transform: rotate(240deg) translate(0.6em);
+  }
+  to {
+    -webkit-transform: rotate(660deg) translate(0);
+            transform: rotate(660deg) translate(0);
+  }
+}
+
+@-webkit-keyframes pizza6 {
+  from {
+    -webkit-transform: rotate(300deg) translate(0.6em);
+            transform: rotate(300deg) translate(0.6em);
+  }
+  to {
+    -webkit-transform: rotate(720deg) translate(0);
+            transform: rotate(720deg) translate(0);
+  }
+}
+
+@keyframes pizza6 {
+  from {
+    -webkit-transform: rotate(300deg) translate(0.6em);
+            transform: rotate(300deg) translate(0.6em);
+  }
+  to {
+    -webkit-transform: rotate(720deg) translate(0);
+            transform: rotate(720deg) translate(0);
+  }
+}
+
+@-webkit-keyframes loader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+    z-index: -3;
+  }
+}
+
+@keyframes loader {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+    z-index: -3;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -44,7 +44,7 @@
             position: relative;
             right: 0;
             margin: -0.1em 1em 0 .5em;
-            transition: right .4s;
+            transition: right .4s, margin-left .4s;
         }
         &--coche{
             @include flex-center;
@@ -69,6 +69,7 @@
         &:hover{
             .plat--prix{
                 right: 18%;
+                margin-left: 4em;
             }
         }
         /*le bloc de code ci-dessous permet la transition de la coche*/

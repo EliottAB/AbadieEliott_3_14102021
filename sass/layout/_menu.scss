@@ -36,6 +36,14 @@
             right: 1.5em !important;
         }
     }
+    >img{
+        right: 2.05em;
+        top: 2.2em;
+        @media screen and (min-width: 720px){
+            right: 2.2em;
+            top: 2.25em;
+        }
+    }
     section{
         margin-top: 2em;
     }
